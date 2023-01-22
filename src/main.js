@@ -8,6 +8,7 @@ import { createSiteFilmsListRatedTemplate } from './view/site-films-list-rated.j
 import { createCardTemplate } from './view/card.js';
 import { createShowMoreButtonTemplate } from './view/show-more-button.js';
 import { createPopupTemplate } from './view/popup.js';
+import { generateCard } from './mock/card.js';
 
 const render = (container, template, place) => {
   container.insertAdjacentHTML(place, template);
@@ -51,3 +52,5 @@ for(let i = 0; i < TASK_SPECIAL_COUNT; i++) {
 
 render(siteFilmsList, createShowMoreButtonTemplate(), 'beforeend');
 render(siteMainElement, createPopupTemplate(), 'beforeend');
+
+console.log(generateCard());
